@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy the application files to the container's working directory
 COPY . /app
 
+# Install dependencies, including Django
+RUN pip install -r requirements.txt
+
 # Expose the port your application is listening on (if not already specified in the application code)
 EXPOSE 8000
 
