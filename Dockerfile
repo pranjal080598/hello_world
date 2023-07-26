@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8000
 
 # Command to run your application (modify as needed based on your application)
-CMD ["python", "my_app/apps.py"]
+CMD ["uwsgi", "-w", "wsgi", "--processes", "10"]
